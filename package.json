@@ -4,7 +4,7 @@
   "description": "React app using redux patterns without actually using redux...",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel ./src/index.html"
   },
   "author": "",
   "license": "ISC",
