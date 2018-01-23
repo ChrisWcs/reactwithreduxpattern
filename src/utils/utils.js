@@ -1,0 +1,7 @@
+const convertToBinary = () => {
+
+};
+
+const convertToBaseten = () => {
+    
+}
