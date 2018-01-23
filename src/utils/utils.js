@@ -1,7 +1,15 @@
-export const convertToBinary = () => {
+export const convertToBinary = (value) => {
+    let result = "";
+    let j = value;
 
+    while( Math.floor(j/2) > 0) {
+        result = "" + (j % 2) + result;
+        j = Math.floor(j/2);
+    }
 
-    
+    result = "" + (j % 2) + result;
+
+    return result;
 };
 
 export const convertToBaseten = (value) => {
