@@ -4,13 +4,18 @@ const reducer = (state, action) => {
     switch(action.type){
         case CONVERT_TO_BASETEN:
             return {
-                curRes: ,
-                type: ,
+                curRes: "",
+                history: [
+                    {
+                        beg: state.curRes
+                    }, 
+                    ...state.history
+                ]
             };
         case CONVERT_TO_BINARY:
             return {
                 curRes: ,
-                type: ,
+                history: []
             };
         default:
             return state;
