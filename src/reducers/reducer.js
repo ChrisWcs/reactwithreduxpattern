@@ -1,4 +1,5 @@
 import { CONVERT_TO_BASETEN, CONVERT_TO_BINARY } from '../actions/actions';
+import { convertToBaseten, convertToBinary } from '../utils/utils';
 
 const reducer = (state, action) => {
     switch(action.type){
@@ -7,15 +8,24 @@ const reducer = (state, action) => {
                 curRes: "",
                 history: [
                     {
-                        beg: state.curRes
+                        beg: state.curRes,
+                        res: convertToBaseten(state.curRes),
+                        type: "Binary to Baseten",
                     }, 
                     ...state.history
                 ]
             };
         case CONVERT_TO_BINARY:
             return {
-                curRes: ,
-                history: []
+                curRes: "",
+                history: [
+                    {
+                        beg: state.curRes,
+                        res: convertToBinary(parseInt(state.curRes)),
+                        type: "Baseten to Binary",
+                    }, 
+                    ...state.history
+                ]
             };
         default:
             return state;
